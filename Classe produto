@@ -1,0 +1,35 @@
+public class Produto {
+    private String nome;
+    private double preco;
+    private int quantidade;
+
+    public Produto(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidade = 0; // Começa com zero
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void aumentarQuantidade(int quantidade) {
+        this.quantidade += quantidade;
+    }
+
+    public void diminuirQuantidade(int quantidade) {
+        if (this.quantidade >= quantidade) {
+            this.quantidade -= quantidade;
+        } else {
+            System.out.println("Quantidade insuficiente em estoque!");
+        }
+    }
+}
