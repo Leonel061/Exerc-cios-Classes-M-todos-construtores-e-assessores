@@ -1,0 +1,13 @@
+public class MainProduto {
+    public static void main(String[] args) {
+        Produto produto1 = new Produto("Celular", 2500.00);
+        
+        produto1.aumentarQuantidade(10);
+        System.out.println("Nome: " + produto1.getNome());
+        System.out.println("Preço: R$" + produto1.getPreco());
+        System.out.println("Quantidade em estoque: " + produto1.getQuantidade());
+
+        produto1.diminuirQuantidade(5);
+        System.out.println("Quantidade após venda: " + produto1.getQuantidade());
+    }
+}
